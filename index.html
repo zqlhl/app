@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Login</title>
+    <title>登录</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- 加载 Turnstile 的 API -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <div class="login-container">
@@ -13,7 +14,8 @@
         <form id="login-form">
             <input type="text" id="username" placeholder="请输入11位账号" maxlength="11" required>
             <input type="password" id="password" placeholder="请输入8位密码" maxlength="8" required>
-            <div class="g-recaptcha" data-sitekey="你的站点密钥"></div>
+            <!-- Turnstile 验证 -->
+            <div class="cf-turnstile" data-sitekey="你的站点密钥"></div>
             <button type="submit">登录</button>
         </form>
     </div>
