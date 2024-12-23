@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
+        input { margin: 10px; padding: 10px; width: 200px; }
+        button { padding: 10px 20px; }
+    </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <h1>登录</h1>
+    <form id="login-form">
+        <input type="text" id="account" placeholder="请输入11位账号" maxlength="11" required><br>
+        <input type="password" id="password" placeholder="请输入8位密码" maxlength="8" required><br>
+        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div><br>
+        <button type="submit">登录</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
