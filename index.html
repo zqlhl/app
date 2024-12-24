@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .login-container {
+      width: 300px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>请输入邀请码</h2>
+    <input type="text" id="invitation-code" placeholder="邀请码">
+    <button id="login-button">登录</button>
+  </div>
+
+  <script>
+    document.getElementById('login-button').addEventListener('click', function() {
+      const code = document.getElementById('invitation-code').value.trim();
+      if (code === '2757zq') {
+        // 邀请码正确，跳转到聊天室
+        window.location.href = 'chat.html';
+      } else {
+        alert('邀请码错误，请重试！');
+      }
+    });
+  </script>
+</body>
+</html>
