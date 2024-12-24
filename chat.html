@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聊天室</title>
+  <style>
+    /* 样式同之前 */
+    .friend-list, .private-chat {
+      margin-top: 20px;
+    }
+    .friend-list button, .private-chat button {
+      margin: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>欢迎进入聊天室</h2>
+
+  <!-- 公共聊天区域 -->
+  <div id="public-chat" class="chat-container">
+    <div id="messages"></div>
+    <input type="text" id="message-input" placeholder="输入消息">
+    <button id="send-message">发送</button>
+  </div>
+
+  <!-- 好友列表 -->
+  <div class="friend-list">
+    <h3>好友列表</h3>
+    <div id="friend-container"></div>
+  </div>
+
+  <!-- 私人聊天室 -->
+  <div class="private-chat">
+    <h3>私人聊天室</h3>
+    <div id="private-chat-container"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
